@@ -8,6 +8,7 @@ export function createStore(rootReducer, initialState) {
       subscribers.forEach((callback) => callback());
     },
     subscribe(callback) {
+      console.log("### state: ", state.getState());
       subscribers.push(callback);
     },
     getState() {
